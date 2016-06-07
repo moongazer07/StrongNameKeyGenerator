@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidSnCommandPackage">
+  
+    <Groups>
+      <Group guid="guidSnCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+    </Groups>
+    <Buttons>
+      <!--To define a menu group you have to specify its ID, the parent menu and its display priority.
+          The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
+          the CommandFlag node.
+          You can add more than one CommandFlag node e.g.:
+              <CommandFlag>DefaultInvisible</CommandFlag>
+              <CommandFlag>DynamicVisibility</CommandFlag>
+          If you do not want an image next to your command, remove the Icon node /> -->
+      <Button guid="guidSnCommandPackageCmdSet" id="SnCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidSnCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+          <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+             <CommandName>SnCommandId</CommandName>
+          <ButtonText>Generate StrongName Key</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+    
+      <Bitmap guid="guidImages" href="Resources\SnCommand.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidSnCommandPackage" value="{bfacae90-6c14-40be-b1de-13ea0fd11be7}" />
+
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidSnCommandPackageCmdSet" value="{74650761-c52d-4c48-a3e2-631df1e426e6}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="SnCommandId" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{71c2e89d-822c-4e32-94f0-506a89dbc62a}" >
+      <IDSymbol name="bmpPic1" value="1" />    
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
