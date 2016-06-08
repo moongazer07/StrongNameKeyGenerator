@@ -9,24 +9,48 @@ or get the [CI build](http://vsixgallery.com/extension/0b0faa84-d117-4045-a28c-4
 
 ---------------------------------------
 
-Generates StrongName Key for VSIX extension
+Extracts public key from key-pair without the need of using command prompt.
+
+strong name provides a strong integrity check, By strongly naming your VSIX project, 
+you are assured that your binary has not been tampered with since it was compiled or built.
+
+Before strong name signing an assembly,there is the need to generate a public or private key-pair, 
+and the .NETFramework SDK provides tools for assigning a cryptographic signature to any built assembly. 
+
+The first step in strongname signing is generating a key-pair. The sn.exe tool is located 
+in "C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\Bin\" and is a cmd tool, 
+or more preferable through Microsoft Visual Studio IDE via project’s properties.
+This option generates key-pairs and sign assemblies without the need to create a key-pair using Sn.exe
+    - click on signing tab, 
+    - check "Sign the assembly" then browse to the .snk file:
+
+
+![Strongname Key Generation](arts/strongnameKey Generation.png)
+
+
+
 
 See the [changelog](CHANGELOG.md) for changes and roadmap.
 
 ## Features
 
-- Feature 1
-- Feature 2
-  - Sub feature
+- Extracts public key from key-pair for VSIX related projects
 
-### Feature 1
-Describe feature 1. Add screenshots/code samples etc.
 
-### Feature 2
-Describe feature 2. Add screenshots/code samples etc.
 
-#### Sub feature
-Describe sub feature. Add screenshots/code samples etc.
+.   Right click on your Key-pair
+
+![Menu](arts/Menu.png)
+
+.   Select "generate StrongName Key"
+
+![Process](arts/Process.png)
+
+- The tool uses "sn -k keypair.snk" to create a key-pair
+- And "sn -p keypair.snk public.snk" to extract the public key from the key-pair 
+
+Then copy the key and paste to your desired location.
+
 
 ## Contribute
 Check out the [contribution guidelines](CONTRIBUTING.md)
