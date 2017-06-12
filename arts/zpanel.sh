@@ -266,7 +266,7 @@ mysql_install_db
 service mysql start
 /usr/bin/mysqladmin -u root password $password
 mysqladmin -u root password $password
-until mysql -u root -p$password -e ";" > /dev/null 2>&1 ; do
+until mysql -u root -p $password -e ";" > /dev/null 2>&1 ; do
 read -s -p "enter your root mysql password : " password
 done
 
