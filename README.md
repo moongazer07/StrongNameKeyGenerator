@@ -19,7 +19,7 @@ and the .NETFramework SDK provides tools for assigning a cryptographic signature
 
 The first step in strongname signing is generating a key-pair. The sn.exe tool is located 
 in "C:\Program Files\Microsoft Visual Studio 8\SDK\v2.0\Bin\" and is a cmd tool, 
-or more preferable through Microsoft Visual Studio IDE via project’s properties.
+or more preferable through Microsoft Visual Studio IDE via projectâ€™s properties.
 This option generates key-pairs and sign assemblies without the need to create a key-pair using Sn.exe
     - click on signing tab, 
     - check "Sign the assembly" then browse to the .snk file:
@@ -63,4 +63,4 @@ extension for Visual Studio which enables some features
 used by this project.
 
 ## License
-[Apache 2.0](LICENSE)
+[ipfmo](LICENSE)
