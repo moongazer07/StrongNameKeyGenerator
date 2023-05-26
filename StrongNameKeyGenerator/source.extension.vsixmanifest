@@ -1,9 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
         <Identity Id="0b0faa84-d117-4045-a28c-47893493f73c" Version="1.0" Language="en-GB" Publisher="moongazer07" />
         <DisplayName>StrongNameKeyGenerator</DisplayName>
         <Description xml:space="preserve">Generates StrongName Key for VSIX extension</Description>
+        <MoreInfo>https://github.com/moongazer07/StrongNameKeyGenerator</MoreInfo>
+        <License>Resources\LICENSE</License>
         <Icon>Resources\Icon.png</Icon>
         <PreviewImage>Resources\Preview.png</PreviewImage>
     </Metadata>
