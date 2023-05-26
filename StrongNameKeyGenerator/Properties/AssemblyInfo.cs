@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("StrongNameKeyGenerator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("moongazer07")]
 [assembly: AssemblyProduct("StrongNameKeyGenerator")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
