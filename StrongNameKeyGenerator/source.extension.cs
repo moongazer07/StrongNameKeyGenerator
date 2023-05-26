@@ -10,9 +10,9 @@ namespace StrongNameKeyGenerator
         public const string Id = "0b0faa84-d117-4045-a28c-47893493f73c";
         public const string Name = "StrongNameKeyGenerator";
         public const string Description = "Generates StrongName Key for VSIX extension";
-        public const string Language = "en-US";
+        public const string Language = "en-GB";
         public const string Version = "1.0";
-        public const string Author = "Company";
+        public const string Author = "moongazer07";
         public const string Tags = "";
     }
 }
